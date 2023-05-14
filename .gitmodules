@@ -1,0 +1,18 @@
+[submodule "back-end/backend/gateway"]
+	path = back-end/backend/gateway
+	url = https://github.com/kjnwjn/gateway.git
+[submodule "backend/gateway"]
+	path = backend/gateway
+	url = https://github.com/kjnwjn/gateway.git
+[submodule "backend/account_service"]
+	path = backend/account_service
+	url = https://github.com/kjnwjn/account_service.git
+[submodule "backend/client_service"]
+	path = backend/client_service
+	url = https://github.com/kjnwjn/client_service.git
+[submodule "backend/course-service"]
+	path = backend/course-service
+	url = https://github.com/truonggiangit793/course-service.git
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/kjnwjn/stdpotal-frontend.git
