@@ -30,11 +30,11 @@ Thành viên tham gia:
 
 ### Homepage của học sinh
 
-![](./frontend//public/student_page.png "Student Homepage")
+![](./public//student_page.png "Student Homepage")
 
 ### Homepage của admin
 
-![](./frontend//public/admin_page.png "Admin Homepage")
+![](./public//admin_page.png "Admin Homepage")
 
 ## Những tính năng chính
 
