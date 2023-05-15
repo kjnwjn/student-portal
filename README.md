@@ -26,6 +26,16 @@ Thành viên tham gia:
     viên, quản lý lớp, quản lý điểm, quản lý môn học và các chức năng phục vụ việc học
     tập như xem thời khóa biểu, đăng ký kế hoạch học tập, đăng ký môn học, ...
 
+## Ảnh chụp màn hình
+
+### Homepage của học sinh
+
+![](./frontend//public/student_page.png "Student Homepage")
+
+### Homepage của admin
+
+![](./frontend//public/admin_page.png "Admin Homepage")
+
 ## Những tính năng chính
 
 -   Quản lý thông tin sinh viên: Cho phép quản lý các thông tin cá nhân của sinh viên
@@ -43,6 +53,8 @@ Thành viên tham gia:
     hoạch học tập để mở lớp
 -   Quản lý lớp môn học: Cho phép Phòng đại học mở lớp môn học và xem lại danh
     sách các lớp môn họ
+    ...
+-   Chi tiết xem tại file soa_final_project.pdf
 
 ## Công nghê sử dụng
 
@@ -55,6 +67,11 @@ Công nghệ sử dụng xây dựng giao diện người dùng:
 
 -   [VueJS] - HTML enhanced for web apps!
 
+Công nghệ khác:
+
+-   [PM2] - PM2 is a production process manager for Node.js applications with a built-in load balancer!
+-   [Swagger] - Simplify API development for users, teams, and enterprises with the Swagger open source and professional toolset!
+
 Hệ cơ sở dũ liệu : [MongoDB] [MySQL]
 
 ## Cài đặt
@@ -65,8 +82,19 @@ Tiến hành cài đặt các gói thư viện cần thiết cho Back-end:
 
 ```sh
 cd backend
-npm install --force
+npm install
 ```
+
+Cấu hình các biến môi trường cho Back-end trong file ecosystem.config.js:
+
+-   **ACCESS_TOKEN_SECRET_KEY**: Secret_key cho access token.
+-   **REFRESH_TOKEN_SECRET_KEY**: Secret_key cho refresh token.
+-   **ACCOUNT_SERVICE_HOST**: địa chỉ mặc định cho account service server.
+-   **DB_URL_ACCOUNT_SERVICE**: địa chỉ database cho account service server.
+-   **CLIENT_SERVICE_HOST**: địa chỉ mặc định cho client service server.
+-   **DB_CLIENT_USERNAME**: database client service tên đăng nhập.
+-   **COURSE_SERVICE_HOST**: địa chỉ mặc định cho course service server.
+-   **DB_URL_COURSE_SERVICE**: địa chỉ database cho course service server.
 
 Tiến hành cài đặt các gói thư viện cần thiết cho Front-end:
 
@@ -77,9 +105,8 @@ npm install
 
 Cấu hình các biến môi trường cho Front-end:
 
--   **SERVER_BASE_URL**: địa chỉ mặc định của server.
+-   **VUE_APP_API_GATEWAY**: địa chỉ mặc định của server gateway.
 -   **VUE_APP_BASE_URL**: địa chỉ mặc định của VueJS font-end chạy ở môi trường DEV.
--   **VUE_APP_API_URL**: chỉ định địa chỉ API cho việc call API ở phía font-end.
 
 Cài đặt MongoDB, xem thêm cách cài đặt tại đây [MongoDB - Document]
 
@@ -89,14 +116,14 @@ Dưới đây là các bước chi tiết khởi chạy hệ thông sau khi hoà
 
 ##### 1. Chạy ứng dụng :
 
-APi sẽ được khởi chạy mặc định tại [localhost:3300](http://localhost:3300/)
-Để xem document của api [localhost:3300/api/docs](http://localhost:3300/api/docs)
+APi GATEWAY sẽ được khởi chạy mặc định tại [localhost:3004](http://localhost:3004/)
+Để xem document của api [localhost:3004/api/student-portal/v1/docs](localhost:3004/api/student-portal/v1/docs/)
 
 -   Khởi chạy api:
 
 ```
 cd backend
-npm run dev
+npm start
 ```
 
 Ứng dụng Vue sẽ được khởi chạy mặc định tại [localhost:8080](http://localhost:8080)
@@ -134,3 +161,5 @@ MIT
 [mongodb]: https://www.mongodb.com
 [mongodb - document]: https://www.mongodb.com/docs/
 [MySQL]: https://www.mysql.com/
+[PM2]: https://pm2.io/
+[Swagger]: https://swagger.io/

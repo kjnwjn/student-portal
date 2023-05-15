@@ -4,8 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install.account_service": "cd ./account_service && yarn",
+    "install.client_service": "cd ./client_service && yarn",
+    "install.course_service": "cd ./course_service && yarn && yarn build",
+    "install.gateway": "cd ./gateway && yarn",
+    "start": "install.account_service && install.client_service && install.course_service && install.gateway && pm2 start ecosystem.config.js",
+    "stop": "pm2 stop ecosystem.config.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "pidusage": "^3.0.2"
+  }
 }
